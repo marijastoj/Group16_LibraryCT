@@ -3,6 +3,7 @@ package com.cydeo.utilities;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -63,6 +64,11 @@ public class BrowserUtils {
     public static void waitForClickable(WebElement element){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void moveToElement(WebElement element){
+        Actions action = new Actions(Driver.getDriver());
+        action.moveToElement(element).perform();
     }
 
 }
