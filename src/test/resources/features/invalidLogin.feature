@@ -1,4 +1,4 @@
-Feature: User put invalid email or password
+Feature: put invalid email or password
 @wip
 Scenario: As a user, I should be able to login to LibraryCT.
 Given user is on the loginPage
