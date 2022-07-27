@@ -21,7 +21,7 @@ public class LibraryCTStepDefinitions {
     }
     @When("librarian enters valid credentials and clicks sign in button")
     public void librarian_enters_valid_credentials_and_clicks_sign_in_button() {
-        libraryCTLoginPage.login(ConfigurationReader.getProperty("librarianUsername"), ConfigurationReader.getProperty("librarianPassword"));
+        libraryCTLoginPage.login(ConfigurationReader.getProperty("usernameLi"), ConfigurationReader.getProperty("passwordLi"));
     }
     @Given("librarian is on homePage")
     public void librarian_is_on_home_page() {
