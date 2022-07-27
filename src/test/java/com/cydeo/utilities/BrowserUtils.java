@@ -50,6 +50,10 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.urlContains(url));
     }
 
+    public static void waitForTitle(String title){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        wait.until(ExpectedConditions.titleIs(title));
+    }
     public static boolean ifButtonOnTheLeft(String buttonOne, String buttonTwo){
         boolean check = false;
         String xpath = "";
