@@ -56,23 +56,4 @@ public class LibraryCTStepDefinitions {
         System.out.println(libraryCTBookPage.bookCreatedMessage.getText());
     }
 
-    @Given("user is on the loginPage")
-    public void user_is_on_the_login_page() {
-         {Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        }
-    }
-    @When("user enter invalid email or password")
-    public void user_enter_invalid_email_or_password() {
-        libraryCTLoginPage.login("student", "368383414486M");
-
-    }
-    @When("student click sign in button")
-    public void student_click_sign_in_button() {
-
-    }
-    @Then("verify the error message {string}")
-    public void verify_the_error_message(String string) {
-
-    }
-
 }
