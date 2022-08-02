@@ -30,6 +30,7 @@ public class LibraryCTBasePage {
     @FindBy(linkText = "Log Out")
     public WebElement logOutBtn;
 
+
     public void logOut(){
         BrowserUtils.moveToElement(userDropdown);
         logOutBtn.click();
