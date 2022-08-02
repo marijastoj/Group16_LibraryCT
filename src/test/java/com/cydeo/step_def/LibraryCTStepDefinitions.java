@@ -68,11 +68,12 @@ public class LibraryCTStepDefinitions {
     }
     @When("student click sign in button")
     public void student_click_sign_in_button() {
-
+libraryCTLoginPage.signInBtn.click();
     }
     @Then("verify the error message {string}")
     public void verify_the_error_message(String string) {
 
+Assert.assertTrue(libraryCTLoginPage.alertMsg.isDisplayed());
     }
 
 }
