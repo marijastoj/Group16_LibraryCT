@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_def",
-        dryRun = false,
-        tags = "@B26G16-71"
+        dryRun =false,
+        tags = 	"@B26G16-65"
 
 )
 

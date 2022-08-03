@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LibraryCTBasePage {
 
     public LibraryCTBasePage(){
@@ -29,6 +31,11 @@ public class LibraryCTBasePage {
 
     @FindBy(linkText = "Log Out")
     public WebElement logOutBtn;
+
+    @FindBy(xpath = "//li[@class='nav-item']")
+    public List<WebElement> models;
+
+
 
     public void logOut(){
         BrowserUtils.moveToElement(userDropdown);

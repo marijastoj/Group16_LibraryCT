@@ -17,6 +17,7 @@ public class LibraryCTStepDefinitions {
 
     @Given("librarian is on the loginPage")
     public void librarian_is_on_the_login_page() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
     @When("librarian enters valid credentials and clicks sign in button")
@@ -30,6 +31,7 @@ public class LibraryCTStepDefinitions {
     }
     @When("librarian clicks Books module")
     public void librarian_clicks_books_module() {
+
         libraryCTBookPage.booksModuleBtn.click();
     }
     @When("librarian clicks +Add Book button")
@@ -55,5 +57,6 @@ public class LibraryCTStepDefinitions {
 
         System.out.println(libraryCTBookPage.bookCreatedMessage.getText());
     }
+
 
 }
