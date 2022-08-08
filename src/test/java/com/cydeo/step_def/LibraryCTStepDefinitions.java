@@ -33,6 +33,7 @@ public class LibraryCTStepDefinitions {
 
     @Given("librarian is on the loginPage")
     public void librarian_is_on_the_login_page() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
     @When("librarian enters valid credentials and clicks sign in button")
@@ -46,6 +47,7 @@ public class LibraryCTStepDefinitions {
     }
     @When("librarian clicks Books module")
     public void librarian_clicks_books_module() {
+
         libraryCTBookPage.booksModuleBtn.click();
     }
     @When("librarian clicks +Add Book button")
@@ -108,4 +110,29 @@ public class LibraryCTStepDefinitions {
     public void student_should_be_able_to_borrow() {
         Assert.assertTrue(libraryCTBorrowingBooks.bookBrwdMsg.isDisplayed());
     }
+
+
+
+    @Given("user is on the loginPage")
+    public void user_is_on_the_login_page() {
+         {Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        }
+    }
+    @When("user enter invalid email or password")
+    public void user_enter_invalid_email_or_password() {
+        libraryCTLoginPage.login("student", "368383414486M");
+
+    }
+    @When("student click sign in button")
+    public void student_click_sign_in_button() {
+libraryCTLoginPage.signInBtn.click();
+    }
+    @Then("verify the error message {string}")
+    public void verify_the_error_message(String string) {
+
+Assert.assertTrue(libraryCTLoginPage.alertMsg.isDisplayed());
+    }
+
+
+
 }

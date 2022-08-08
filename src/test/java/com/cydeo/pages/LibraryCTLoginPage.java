@@ -27,5 +27,6 @@ public class LibraryCTLoginPage {
         loginPass.sendKeys(password);
         signInBtn.click();
     }
-
+@FindBy(xpath="//div[@class = 'alert alert-danger']")
+public WebElement alertMsg;
 }
