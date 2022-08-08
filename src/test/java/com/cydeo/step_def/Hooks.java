@@ -23,7 +23,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
 
-        Driver.closeDriver();
+    //    Driver.closeDriver();
 
         System.out.println("---> It is coming from @After in Hooks");
     }
