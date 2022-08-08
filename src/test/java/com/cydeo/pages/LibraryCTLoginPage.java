@@ -1,5 +1,6 @@
 package com.cydeo.pages;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,7 @@ public class LibraryCTLoginPage {
     public WebElement signInBtn;
 
     public void login(String username, String password){
+        Driver.getDriver().get("https://library2.cydeo.com/login.html");
         loginEmail.sendKeys(username);
         loginPass.sendKeys(password);
         signInBtn.click();
